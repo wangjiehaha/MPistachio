@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="requestFocus" format="boolean" />
+    <attr name="itemView" format="reference"/>
+    <attr name="items" format="reference"/>
+    <attr name="adapter" format="reference"/>
+    <attr name="onScrollChangeCommand" format="reference" />
+    <attr name="onScrollStateChangedCommand" format="reference" />
+    <attr name="url" format="string" />
+    <attr name="onTouchCommand" format="reference" />
+    <attr name="onClickCommand" format="reference" />
+    <attr name="onLongClickCommand" format="reference" />
+    <attr name="onFocusChangeCommand" format="reference" />
+    <attr name="isThrottleFirst" format="boolean" />
+    <attr name="currentView" format="reference" />
+    <attr name="isVisible" format="boolean" />
+    <attr name="progressChanged" format="reference" />
+    <attr name="startTrack" format="reference" />
+    <attr name="stopTrack" format="reference" />
+</resources>
