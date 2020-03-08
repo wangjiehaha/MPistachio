@@ -30,9 +30,9 @@ android {
 }
 
 dependencies {
-//    implementation fileTree(dir: 'libs', include: ['*.jar'])
-//    api (rootProject.ext.support["com.alibaba:arouter-api"]){
-//        exclude group: 'com.android.support'
-//    }
-//    annotationProcessor (rootProject.ext.support["com.alibaba:arouter-compiler"])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api (rootProject.ext.support["com.alibaba:arouter-api"]){
+        exclude group: 'com.android.support'
+    }
+    annotationProcessor (rootProject.ext.support["com.alibaba:arouter-compiler"])
 }

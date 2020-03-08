@@ -25,8 +25,8 @@ abstract class ApplicationAbs : Application() {
             try {
                 val appLogic: BaseAppLogic = logicClass.newInstance()
                 logicClassList.add(appLogic)
-                appLogic.onCreate()
                 appLogic.setApplication(this)
+                appLogic.onCreate()
             } catch (e: InstantiationError) {
                 e.printStackTrace()
             } catch (e: IllegalAccessError) {
