@@ -31,57 +31,5 @@ android {
 
 dependencies {
     testImplementation 'junit:junit:4.12'
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation (rootProject.ext.support["appcompat-v7"])
-
-    api rootProject.ext.support["support-v4"]
-    api rootProject.ext.support["appcompat-v7"]
-    api rootProject.ext.support["recyclerview-v7"]
-    api rootProject.ext.support["constraint-layout"]
-
-    /* about jetpack lifecycle */
-    api (rootProject.ext.support["lifecycle-extensions"]){
-        exclude group: 'com.android.support'
-    }
-    api (rootProject.ext.support["lifecycle-compiler"]){
-        exclude group: 'com.android.support'
-    }
-    api (rootProject.ext.support["bindingcollectionadapter"]){
-        exclude group: 'com.android.support'
-    }
-    api (rootProject.ext.support["bindingcollectionadapter-recyclerview"]){
-        exclude group: 'com.android.support'
-    }
-    annotationProcessor rootProject.ext.support["lifecycle-compiler"]
-
-    /* about RxJava RxAndroid */
-    api (rootProject.ext.support["rxlifecycle"]){
-        exclude group: 'com.android.support'
-    }
-    api (rootProject.ext.support["rxlifecycle-components"]){
-        exclude group: 'com.android.support'
-    }
-    api (rootProject.ext.support["rxbinding"]){
-        exclude group: 'com.android.support'
-    }
-
-    /* about kotlin */
-    api (rootProject.ext.support["kotlin-stdlib-jdk8"]){
-        exclude group: 'com.android.support'
-    }
-
-    /* about internet */
-    api (rootProject.ext.support["okhttp"]){
-        exclude group: 'com.android.support'
-    }
-    api (rootProject.ext.support["retrofit"]){
-        exclude group: 'com.android.support'
-    }
-    /* about json */
-    api (rootProject.ext.support["converter-gson"]){
-        exclude group: 'com.android.support'
-    }
-    api (rootProject.ext.support["gson"]){
-        exclude group: 'com.android.support'
-    }
+    api project(path: ':opensource')
 }

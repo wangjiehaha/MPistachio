@@ -26,5 +26,5 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     testImplementation rootProject.ext.support["junit"]
-    implementation project(':pistachio')
+    api project(':pistachio')
 }
