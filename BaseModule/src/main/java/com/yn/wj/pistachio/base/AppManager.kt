@@ -6,9 +6,7 @@ import java.lang.Exception
 import java.util.*
 
 /**
- *
- *
- * @date Create time：2020/2/1
+ * activity栈管理类
  */
 class AppManager private constructor(){
 

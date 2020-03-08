@@ -11,9 +11,11 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/BaseModule" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/common" />
             <option value="$PROJECT_DIR$/opensource" />
-            <option value="$PROJECT_DIR$/pistachio" />
+            <option value="$PROJECT_DIR$/third-partylibraries" />
             <option value="$PROJECT_DIR$/weather" />
           </set>
         </option>

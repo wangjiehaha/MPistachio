@@ -1,3 +1,5 @@
-include ':app', ':pistachio'
+include ':app', ':BaseModule'
 include ':weather'
 include ':opensource'
+include ':third-partylibraries'
+include ':common'
