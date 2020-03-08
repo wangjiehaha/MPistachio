@@ -12,6 +12,9 @@ android {
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
+        javaCompileOptions {
+            annotationProcessorOptions { includeCompileClasspath = true }
+        }
     }
 
     buildTypes {
@@ -24,7 +27,5 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    testImplementation rootProject.ext.support["junit"]
     api project(':BaseModule')
 }

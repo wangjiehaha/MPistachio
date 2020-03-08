@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/common" />
             <option value="$PROJECT_DIR$/opensource" />
+            <option value="$PROJECT_DIR$/signup" />
             <option value="$PROJECT_DIR$/third-partylibraries" />
             <option value="$PROJECT_DIR$/weather" />
           </set>

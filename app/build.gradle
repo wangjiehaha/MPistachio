@@ -27,8 +27,5 @@ android {
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation rootProject.ext.support["appcompat-v7"]
-    testImplementation rootProject.ext.support["junit"]
     implementation project(':BaseModule')
 }

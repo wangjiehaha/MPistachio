@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.yn.wj.signup.LoginViewModel"/>
+    </data>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/main_bg"
+            android:padding="25dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo"
+                android:layout_marginTop="40dp"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="#0f0f0f"
+                android:textSize="30sp"
+                android:text="@string/welcome"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="#244f63"
+                android:text="@string/username"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/user_name_hint"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColorHint"
+                    android:textSize="16sp"
+                    android:singleLine="true"
+                    android:text="@={viewModel.userName}"
+                    app:onFocusChangeCommand = "@{viewModel.onFocusChangeCommand}"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:padding="6dp"
+                    android:src="@drawable/iconoverflow"
+                    android:visibility="@{viewModel.cleanButtonVisibility}"
+                    app:onClickCommand="@{viewModel.clearUserNameOnClickCommand}"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/dividerlight"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="#244f63"
+                android:text="@string/password"
+                android:layout_marginTop="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/password_hint"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColorHint"
+                    android:textSize="16sp"
+                    android:text="@={viewModel.password}"/>
+
+                <ImageView
+                    android:id="@+id/ivSwitchPassword"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:padding="6dp"
+                    android:src="@drawable/iconvisibilitydark"
+                    app:onClickCommand="@{viewModel.passwordShowSwitch}"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/dividerlight"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/login"
+                android:textColor="@android:color/white"
+                android:background="@drawable/button_back"
+                app:onClickCommand="@{viewModel.loginOnClickCommand}"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/forget_password"
+                android:textColor="#265267"
+                android:textSize="16sp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textColor="#265267"
+                android:background="@drawable/button_2_back"
+                android:text="@string/create_an_account"
+                android:layout_marginBottom="20dp"/>
+
+        </LinearLayout>
+
+</layout>

@@ -1,6 +1,6 @@
 package com.yn.wj.pistachio.router
 
-import com.alibaba.android.arouter.launcher.ARouter
+//import com.alibaba.android.arouter.launcher.ARouter
 import com.yn.wj.commonmodule.BaseAppLogic
 import com.yn.wj.pistachio.BuildConfig
 
@@ -10,10 +10,10 @@ class ARouterLogic: BaseAppLogic() {
 
     override fun onCreate() {
         super.onCreate()
-        if (isDebugARouter) {
+        /*if (isDebugARouter) {
             ARouter.openLog()
             ARouter.openDebug()
         }
-        ARouter.init(mApplication)
+        ARouter.init(mApplication)*/
     }
 }

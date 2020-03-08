@@ -13,9 +13,13 @@ class MainApplication: BaseApplication(){
     companion object {
         fun getContext(): Application {
             if (sInstance == null) {
-                throw NullPointerException()
+                throw NullPointerException() as Throwable
             }
             return sInstance!!
         }
+    }
+
+    override fun initLogic() {
+
     }
 }
