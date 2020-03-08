@@ -2,31 +2,31 @@ package com.yn.wj.commonmodule
 
 import android.content.res.Configuration
 
-class BaseAppLogic {
+open class BaseAppLogic {
 
-    protected var mApplication: BaseApplication? = null
+    protected lateinit var mApplication: ApplicationAbs
 
-    fun setApplication(application: BaseApplication) {
+    fun setApplication(application: ApplicationAbs) {
         mApplication = application
     }
 
-    fun onCreate() {
+    open fun onCreate() {
 
     }
 
-    fun onTerminate() {
+    open fun onTerminate() {
 
     }
 
-    fun onLowMemory() {
+    open fun onLowMemory() {
 
     }
 
-    fun onTrimMemory() {
+    open fun onTrimMemory() {
 
     }
 
-    fun onConfigurationChanged(newConfig: Configuration?) {
+    open fun onConfigurationChanged(newConfig: Configuration?) {
 
     }
 }

@@ -3,14 +3,15 @@ package com.yn.wj.commonmodule
 import android.app.Application
 import android.content.res.Configuration
 
-abstract class BaseApplication : Application() {
+abstract class ApplicationAbs : Application() {
 
     private val logicList: ArrayList<Class<out BaseAppLogic>> = ArrayList()
     private val logicClassList: ArrayList<BaseAppLogic> = ArrayList()
 
     override fun onCreate() {
         super.onCreate()
-
+        initLogic()
+        logicCreate()
     }
 
     protected abstract fun initLogic()
@@ -25,6 +26,7 @@ abstract class BaseApplication : Application() {
                 val appLogic: BaseAppLogic = logicClass.newInstance()
                 logicClassList.add(appLogic)
                 appLogic.onCreate()
+                appLogic.setApplication(this)
             } catch (e: InstantiationError) {
                 e.printStackTrace()
             } catch (e: IllegalAccessError) {
