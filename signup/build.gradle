@@ -18,7 +18,10 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
         javaCompileOptions {
-            annotationProcessorOptions { includeCompileClasspath = true }
+            annotationProcessorOptions {
+                arguments = [moduleName :project.getName() ]
+                includeCompileClasspath = true
+            }
         }
     }
 
@@ -47,4 +50,5 @@ android {
 
 dependencies {
     api project(':BaseModule')
+    kapt (rootProject.ext.support["com.alibaba:arouter-compiler"])
 }

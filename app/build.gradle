@@ -12,7 +12,10 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         javaCompileOptions {
-            annotationProcessorOptions { includeCompileClasspath = true }
+            annotationProcessorOptions {
+                arguments = [moduleName :project.getName() ]
+                includeCompileClasspath = true
+            }
         }
     }
     buildTypes {
@@ -28,4 +31,6 @@ android {
 
 dependencies {
     implementation project(':BaseModule')
+    implementation project(path: ':signup')
+    kapt (rootProject.ext.support["com.alibaba:arouter-compiler"])
 }

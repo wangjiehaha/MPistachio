@@ -15,13 +15,12 @@ import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.yn.wj.commonmodule.RouterTable
 import com.yn.wj.signup.databinding.ActivityLoginBinding
 
-/**
- *
- *
- * @date Create time：2020/2/20
- */
+
+@Route(path = RouterTable.ACTIVITY_SIGN_IN)
 class LoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>() {
 
     override fun initContentView(savedInstanceState: Bundle?): Int {

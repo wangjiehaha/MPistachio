@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
@@ -34,5 +35,5 @@ dependencies {
     api (rootProject.ext.support["com.alibaba:arouter-api"]){
         exclude group: 'com.android.support'
     }
-    annotationProcessor (rootProject.ext.support["com.alibaba:arouter-compiler"])
+    kapt (rootProject.ext.support["com.alibaba:arouter-compiler"])
 }
