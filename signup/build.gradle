@@ -1,54 +1,9 @@
-if (isModule.toBoolean()) {
-    apply plugin: 'com.android.library'
-} else {
-    apply plugin: 'com.android.application'
-}
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
-apply plugin: 'kotlin-kapt'
-
+apply from: "../module.build.gradle"
 android {
-    compileSdkVersion rootProject.ext.android.compileSdkVersion
-    defaultConfig {
-        minSdkVersion rootProject.ext.android.minSdkVersion
-        targetSdkVersion rootProject.ext.android.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles 'consumer-rules.pro'
-        javaCompileOptions {
-            annotationProcessorOptions {
-                arguments = [moduleName :project.getName() ]
-                includeCompileClasspath = true
-            }
-        }
-    }
-
-    sourceSets{
-        main {
-            if (isModule.toBoolean()) {
-                manifest.srcFile 'src/main/module/AndroidManifest.xml'
-            } else {
-                manifest.srcFile 'src/main/AndroidManifest.xml'
-            }
-        }
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
-
-    dataBinding {
-        //noinspection DataBindingWithoutKapt
-        enabled true
-    }
 }
 
 dependencies {
-    api project(':BaseModule')
+    api project(':CommonModule')
     kapt (rootProject.ext.support["com.alibaba:arouter-compiler"])
 }

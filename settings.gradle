@@ -1,4 +1,4 @@
-include ':app', ':BaseModule'
+include ':app', ':CommonModule'
 include ':weather'
 include ':opensource'
 include ':third-partylibraries'
