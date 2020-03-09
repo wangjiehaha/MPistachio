@@ -30,7 +30,7 @@ android {
 }
 
 dependencies {
-    implementation project(':CommonModule')
+    implementation project(':module-common')
     kapt (rootProject.ext.support["com.alibaba:arouter-compiler"])
-    implementation project(path: ':signup')
+    implementation project(path: ':module-signup')
 }

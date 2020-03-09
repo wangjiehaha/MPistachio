@@ -1,10 +1,9 @@
 apply from: "../module.build.gradle"
-
 android {
-
+    resourcePrefix "signup_"
 }
 
 dependencies {
-    api project(':CommonModule')
+    api project(':module-common')
     kapt (rootProject.ext.support["com.alibaba:arouter-compiler"])
 }

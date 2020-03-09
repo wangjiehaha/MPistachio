@@ -1,9 +1,10 @@
 apply from: "../module.build.gradle"
-android {
 
+android {
+    resourcePrefix "weather_"
 }
 
 dependencies {
-    api project(':CommonModule')
+    api project(':module-common')
     kapt (rootProject.ext.support["com.alibaba:arouter-compiler"])
 }
