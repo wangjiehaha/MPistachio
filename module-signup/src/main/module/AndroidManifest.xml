@@ -1,7 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.yn.wj.signup">
-    <application
-        android:theme="@style/AppTheme">
+    <application>
         <activity android:name=".LoginActivity"/>
     </application>
 </manifest>
