@@ -1,4 +1,13 @@
 apply from: "../module.build.gradle"
+apply from: "../local.repository.gradle"
+
+uploadArchives{
+    repositories.mavenDeployer{
+        pom.artifactId = "sign"
+        pom.version = "1.0.0"
+    }
+}
+
 android {
     resourcePrefix "signup_"
 }
