@@ -35,5 +35,8 @@ dependencies {
     api (rootProject.ext.support["com.alibaba:arouter-api"]){
         exclude group: 'com.android.support'
     }
+//    api (rootProject.ext.support["exoplayer-core"]){
+//        exclude group: 'com.android.support'
+//    }
     kapt (rootProject.ext.support["com.alibaba:arouter-compiler"])
 }

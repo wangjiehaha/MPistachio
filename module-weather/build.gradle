@@ -6,5 +6,6 @@ android {
 
 dependencies {
     api project(':module-common')
-    kapt (rootProject.ext.support["com.alibaba:arouter-compiler"])
+    kapt(rootProject.ext.support["com.alibaba:arouter-compiler"])
+    implementation files('libs/HeWeather_Public_Android_V3.3.jar')
 }
