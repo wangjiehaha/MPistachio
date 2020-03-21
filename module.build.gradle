@@ -47,3 +47,8 @@ android {
         enabled true
     }
 }
+
+dependencies {
+    implementation project(':module-common')
+    kapt (rootProject.ext.support["com.alibaba:arouter-compiler"])
+}

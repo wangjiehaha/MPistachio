@@ -1,5 +1,8 @@
 package com.cvte.led.module_music
 
+import com.cvte.led.module_music.player.LocalMusicPlayer
+import com.cvte.led.module_music.player.MusicPlayer
+
 class MusicPlayManager: OnPlayerCallBack {
     private val mMusicPlayer: MusicPlayer
 
@@ -42,7 +45,7 @@ class MusicPlayManager: OnPlayerCallBack {
 
     }
 
-    override fun onPlayerError(errorCode: PlayErrorCode, errorMsg: String) {
+    override fun onPlayerError(errorCode: PlayErrorCode, errorMsg: String?) {
 
     }
 

@@ -7,7 +7,7 @@ interface OnPlayerCallBack {
 
     fun onPlayComplete()
 
-    fun onPlayerError(errorCode: PlayErrorCode, errorMsg: String)
+    fun onPlayerError(errorCode: PlayErrorCode, errorMsg: String? = null)
 
     fun onPlayerRelease()
 }

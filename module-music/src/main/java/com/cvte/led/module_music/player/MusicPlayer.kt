@@ -1,4 +1,6 @@
-package com.cvte.led.module_music
+package com.cvte.led.module_music.player
+
+import com.cvte.led.module_music.OnPlayerCallBack
 
 abstract class MusicPlayer{
     var playerCallBack: OnPlayerCallBack? = null
@@ -16,4 +18,8 @@ abstract class MusicPlayer{
     abstract fun stop()
 
     abstract fun seek(position: Long)
+
+    abstract fun getDurationPosition(): Long?
+
+    abstract fun getDuration(): Long?
 }
