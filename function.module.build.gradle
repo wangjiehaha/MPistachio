@@ -8,8 +8,8 @@ android {
     defaultConfig {
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
@@ -28,19 +28,13 @@ android {
         }
     }
 
+    dataBinding {
+        //noinspection DataBindingWithoutKapt
+        enabled true
+    }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    api (rootProject.ext.support["com.alibaba:arouter-api"]){
-        exclude group: 'com.android.support'
-    }
-//    api (rootProject.ext.support["exoplayer-core"]){
-//        exclude group: 'com.android.support'
-//    }
-    api (rootProject.ext.support["live-bus"]){
-        exclude group: 'com.android.support'
-    }
-//    api (rootProject.ext.support["EventBus"])
+    implementation project(':module-common')
     kapt (rootProject.ext.support["com.alibaba:arouter-compiler"])
 }
