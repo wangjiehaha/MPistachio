@@ -1,5 +1,8 @@
 package com.cvte.led.module_music
 
+import com.cvte.led.module_music.bus.PlayErrorCode
+import com.cvte.led.module_music.bus.PlayState
+
 interface OnPlayerCallBack {
     fun onPlayStateChange(state: PlayState)
 
@@ -10,17 +13,4 @@ interface OnPlayerCallBack {
     fun onPlayerError(errorCode: PlayErrorCode, errorMsg: String? = null)
 
     fun onPlayerRelease()
-}
-
-enum class PlayState{
-    PLAY_START,
-    PLAY_STOP,
-    PLAY_PAUSE,
-    PLAY_RESUME
-}
-
-enum class PlayErrorCode {
-    ERROR_UNKNOWN,
-    ERROR_PLAYER_NO_INIT,
-    ERROR_NO_SUPPORT
 }

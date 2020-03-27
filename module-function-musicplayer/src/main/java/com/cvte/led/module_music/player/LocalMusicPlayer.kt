@@ -1,8 +1,8 @@
 package com.cvte.led.module_music.player
 
 import android.media.MediaPlayer
-import com.cvte.led.module_music.PlayErrorCode
-import com.cvte.led.module_music.PlayState
+import com.cvte.led.module_music.bus.PlayErrorCode
+import com.cvte.led.module_music.bus.PlayState
 import java.lang.IllegalStateException
 
 class LocalMusicPlayer: MusicPlayer() {
