@@ -4,6 +4,7 @@ const val KEY_MUSIC_DURATION = "key_music_duration"
 const val KEY_MUSIC_DURATION_POSITION = "key_music_duration_position"
 const val KEY_MUSIC_STATE = "key_music_state"
 const val KEY_MUSIC_ENTITY = "key_music_entity"
+const val KEY_LOCAL_MUSIC_LIST = "key_local_music_list"
 
 enum class PlayState{
     PLAY_START,

@@ -59,7 +59,10 @@ class LocalMusicPlayer: MusicPlayer() {
         mState = MediaPlayerState.END
     }
 
-    override fun playUriAndStart(uri: String) {
+    override fun playUriAndStart(uri: String?) {
+        if (uri == null) {
+            return
+        }
         when (mState) {
             MediaPlayerState.END ->{
                 playerCallBack?.onPlayerError(PlayErrorCode.ERROR_PLAYER_NO_INIT)

@@ -9,7 +9,7 @@ abstract class MusicPlayer{
 
     abstract fun releasePlayer()
 
-    abstract fun playUriAndStart(uri: String)
+    abstract fun playUriAndStart(uri: String?)
 
     abstract fun resume()
 
