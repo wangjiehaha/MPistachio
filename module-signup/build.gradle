@@ -11,8 +11,3 @@ uploadArchives{
 android {
     resourcePrefix "signup_"
 }
-
-dependencies {
-    api project(':module-common')
-    kapt (rootProject.ext.support["com.alibaba:arouter-compiler"])
-}
